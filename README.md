@@ -1,68 +1,17 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## yarn (yarn add) 安装依赖
 
-## Available Scripts
+## yarn start 启动本地环境，在浏览器里查看项目。
+可以添加颜色、评分、删除颜色列表里的颜色。
+每次添加颜色、评分、删除后，都可以在控制台里查看数据的 State 变化。
 
-In the project directory, you can run:
+## 这个小项目主要学习 props 和 state。将 state 全部都在父组件间里去管理。
+react 中，改变数据状态要用 this.setState()。当利用这个方法改变数据后，会自动更新 render 里面得操作，这样就实现了，DOM的重新渲染。
 
-### `npm start`
+## 校验 props，安装了第三方插件：prop-types。
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 自动添加 ID，安装了第三方插件：uuid。
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## 移除脚手架默认的一些文件，只要有 index.js 就行。
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## 项目分添加颜色、颜色列表两大块（AddColor, ColorList）
+颜色列表里面又分了 Color (单个的颜色块)。然后单个的颜色块又引入了 StarRating 组件。这个组件是用来通过传递的星星数量，遍历出 Star 这个组件。
